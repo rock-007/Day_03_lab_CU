@@ -27,6 +27,8 @@ class Pub:
         else:
             return False
     
-     def check_stock(self, drink):
-         print(drink)
-         for drink in self.stock:
+    def check_stock(self, drink):
+        return self.stock.get(drink)
+    
+    def stock_decrease(self, drink):
+        self.stock[drink.name] -= 1
