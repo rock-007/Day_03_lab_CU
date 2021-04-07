@@ -11,7 +11,6 @@ class Customer:
         if pub.check_age_of_customer(self) and pub.check_drunkenness(self):
             self.wallet -= drink_to_buy.price
             pub.stock_decrease(drink_to_buy)
-            #pub.till += drink_to_buy.price
             pub.till_update(drink_to_buy.price)
             self.update_drunkenness(drink_to_buy)
             return True
