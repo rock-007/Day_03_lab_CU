@@ -7,7 +7,7 @@ class Pub:
         #self.food=food
         self.stock={}
 
-    def update_stock(self,stock):
+    def update_stock(self, stock):
         self.stock=stock
     
     def check_age_of_customer(self, customer):
@@ -18,6 +18,15 @@ class Pub:
 
     def till_update(self, amount):
         self.till += amount
-    # def check_stock(self, drink):
-    #     print(drink)
-    #     for drink in self.stock:
+   
+
+    def check_drunkenness(
+        self, customer):
+        if customer.drunkenness <= 0.6:
+            return True
+        else:
+            return False
+    
+     def check_stock(self, drink):
+         print(drink)
+         for drink in self.stock:
